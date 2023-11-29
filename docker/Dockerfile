@@ -14,6 +14,7 @@ ENV PORT=3000
 
 WORKDIR /opt/app
 COPY --from=build /sources/build /opt/app
+COPY --from=build /sources/package.json /opt/app
 COPY --from=build /sources/package-lock.json /opt/app/npm-shrinkwrap.json
 RUN npm ci --omit=dev
 
