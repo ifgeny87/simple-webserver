@@ -1,0 +1,13 @@
+version: "3.3"
+
+name: "simple"
+
+services:
+    webserver:
+        container_name: "webserver"
+        image: "simple-webserver"
+        restart: "unless-stopped"
+        ports:
+            - "3000:3000"
+        volumes:
+            - ./logs:/opt/app/logs
