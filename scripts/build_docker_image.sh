@@ -17,4 +17,4 @@ if [[ ! -e "$DOCKERFILE" ]]; then echo "File $DOCKERFILE does no exists"; exit 1
 docker build \
   --tag "$IMAGE_TAG" \
   --file "$DOCKERFILE" \
-  "$DEPLOY"
+  "$ROOT"
